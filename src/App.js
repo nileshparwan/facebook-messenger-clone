@@ -1,10 +1,16 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+// import ProfileMenu from './components/ProfileMenu/ProfileMenu';
+// import Profile from './components/Profile/Profile';
+
 
 function App() {
   return (
     <div className="App">
-     facebook clone
+      {/* <Profile /> */}
+      {/* <ProfileMenu /> */}
+      <Header />
     </div>
   );
 }
