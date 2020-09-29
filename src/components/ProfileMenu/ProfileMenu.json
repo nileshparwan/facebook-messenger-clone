@@ -1,0 +1,70 @@
+{
+  "data": [
+    [
+      {
+        "title": "Open in Messenger",
+        "icon": "fab fa-facebook-messenger",
+        "url": ""
+      },
+      {
+        "title": "View profile",
+        "icon": "far fa-user-circle",
+        "url": ""
+      }
+    ],
+    [
+      {
+        "title": "Color",
+        "icon": "fas fa-brush",
+        "url": ""
+      },
+      {
+        "title": "Emoji",
+        "icon": "far fa-smile-beam",
+        "url": ""
+      },
+      {
+        "title": "Nicknames",
+        "icon": "fas fa-pencil-alt",
+        "url": ""
+      }
+    ],
+    [
+      {
+        "title": "create group",
+        "icon": "fas fa-users",
+        "url": ""
+      }
+    ],
+    [
+      {
+        "title": "Mute conversation",
+        "icon": "fas fa-bell",
+        "url": ""
+      },
+      {
+        "title": "Ignore message",
+        "icon": "fas fa-comments",
+        "url": ""
+      },
+      {
+        "title": "Block",
+        "icon": "fas fa-user-lock",
+        "url": ""
+      }
+    ],
+    [
+      {
+        "title": "Delete conversation",
+        "icon": "fas fa-trash",
+        "url": ""
+      },
+      {
+        "title": "Something's wrong",
+        "subtitle": "Give feedback and report the conversation",
+        "icon": "fas fa-exclamation",
+        "url": ""
+      }
+    ]
+  ]
+}

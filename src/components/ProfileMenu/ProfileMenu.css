@@ -1,0 +1,82 @@
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.profileMenu {
+  background: #242526;
+  padding: 2px 8px 2px 8px;
+  border-radius: 10px;
+  display: block;
+  width: 250px;
+  height: auto;
+}
+
+.profileMenu__row {
+  display: block;
+  position: relative;
+}
+
+.profileMenu__arrow {
+  height: 15px;
+  width: 15px;
+  background-color: #242526;
+  position: absolute;
+  z-index: 1;
+  transform: rotate(45deg);
+  right: -12px;
+  top: 50px;
+}
+
+.profileMenu__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileMenu__list > li {
+  padding: 8px 0;
+  border-bottom: 1px solid #3e4042;
+}
+
+.profileMenu__list > li > ul > li > a {
+  display: flex;
+  padding: 5px;
+  color: #e4e6eb;
+  border-radius: 5px;
+  align-items: flex-start;
+}
+
+.profileMenu__list > li:last-child {
+  border-bottom: none;
+}
+
+.profileMenu__list > li a:hover {
+  background: #3e4042;
+}
+
+.profileMenu__list a > .icon {
+  flex-basis: 20px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.profileMenu_desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileMenu_desc > h5,
+.profileMenu_desc > small {
+  font-weight: 100;
+}
+
+.profileMenu_desc > small {
+  font-size: 10px;
+  padding-top: 5px;
+}
