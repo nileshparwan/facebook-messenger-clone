@@ -1,12 +1,12 @@
-import React from 'react'
-import './MessageBody.css'
+import React from 'react';
+import './MessageBody.css';
 
-function MessageBody() {
+function MessageBody({ children, className }) {
     return (
-        <div>
-            
+        <div className={`messageBody ${className || ""}`}>
+            {children}
         </div>
-    )
+    );
 }
 
-export default MessageBody
+export default MessageBody;
