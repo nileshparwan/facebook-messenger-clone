@@ -1,0 +1,28 @@
+.featureOptions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  /* border:1px solid red; */
+}
+
+.featureOptions > button {
+  border-radius: 50%;
+  padding: 2px 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin: 0 3px;
+  color: #bec2c9;
+  background: transparent;
+}
+
+.featureOptions > button:hover {
+  background: #3e4042;
+}
+
+.featureOptions > button > i {
+  padding: 2px;
+}
