@@ -1,0 +1,18 @@
+{
+  "MessageOtions": {
+    "options": [
+      {
+        "title": "More",
+        "icon": "fas fa-ellipsis-v"
+      },
+      {
+        "title": "Reply",
+        "icon": "fas fa-reply"
+      },
+      {
+        "title": "reply",
+        "icon": "far fa-smile"
+      }
+    ]
+  }
+}

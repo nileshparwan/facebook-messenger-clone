@@ -1,12 +1,25 @@
-import React from 'react'
+import React from 'react';
+import FeatureOptions from '../FeatureOptions/FeatureOptions';
+import { MessageOtions } from './Message.json';
 import './Message.css';
 
-function Message() {
-    return (
-        <div>
-            
+export const USERTYPE = {
+    CURRENT: "current",
+    NEXTCURRENT: "nextCurrent"
+};
+
+export const POSITION = {
+    LEFT: "left",
+    RIGHT: "right"
+};
+
+function Message({ message, user = USERTYPE.CURRENT, position = POSITION.RIGHT, className }) {
+    return message ? (
+        <div className={`message ${user} ${position} `}>
+            <FeatureOptions className="message_featureOptions" options={MessageOtions?.options} />
+            <span className={`messageText ${user} ${className || ""} `} dangerouslySetInnerHTML={{ __html: `${message} ` }} />
         </div>
-    )
+    ) : <></>;
 }
 
-export default Message
+export default Message;;;;;
