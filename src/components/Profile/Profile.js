@@ -1,7 +1,7 @@
 import React from 'react';
 import './Profile.css';
 
-function Profile() {
+function Profile({ profileHandler }) {
     const DownArrow = (
         <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15" version="1.1">
             <g id="surface1">
@@ -11,7 +11,7 @@ function Profile() {
 
     );
     return (
-        <button className="profile">
+        <button className="profile" onClick={() => profileHandler ? profileHandler() : {}}>
             <div className="profile_imageContainer">
                 <img
                     src="https://scontent.fjnb3-1.fna.fbcdn.net/v/t1.0-1/c2.0.200.200a/p200x200/105392040_2158779914268598_1833508339547982447_n.jpg?_nc_cat=102&_nc_sid=7206a8&_nc_ohc=nkMsRIkgJ2IAX-ItDgB&_nc_ht=scontent.fjnb3-1.fna&_nc_tp=27&oh=8cc6a50455bd7799e0249d7137a73335&oe=5F98398D"
@@ -27,7 +27,7 @@ function Profile() {
                 <p>Active now</p>
             </div>
 
-            {/* <div className="profile__active" /> */}
+            <div className="profile__active" />
         </button>
     );
 }
