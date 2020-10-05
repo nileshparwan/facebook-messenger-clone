@@ -1,8 +1,20 @@
 {
   "headerButtons": [
-    "fas fa-times",
-    "fas fa-minus",
-    "fas fa-phone-alt",
-    "fas fa-video"
+    {
+      "title": "video",
+      "icon": "fas fa-video"
+    },
+    {
+      "title": "phone",
+      "icon": "fas fa-phone-alt"
+    },
+    {
+      "title": "minus",
+      "icon": "fas fa-minus"
+    },
+    {
+      "title": "times",
+      "icon": "fas fa-times"
+    }
   ]
 }
