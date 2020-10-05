@@ -1,0 +1,28 @@
+{
+  "footer": {
+    "options": [
+      {
+        "title": "actions",
+        "icon": "fas fa-plus-circle"
+      },
+      {
+        "title": "files",
+        "icon": "far fa-images"
+      },
+      {
+        "title": "sticky-note",
+        "icon": "far fa-sticky-note"
+      },
+      {
+        "title": "gifts",
+        "icon": "fas fa-gifts"
+      }
+    ],
+    "formData": {
+      "placeholder": "Aa",
+      "smiley": "fas fa-smile",
+      "submit": "fas fa-caret-right"
+    },
+    "likeBtn": "fas fa-thumbs-up"
+  }
+}
