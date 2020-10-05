@@ -4,7 +4,7 @@ import { data } from './ProfileMenu.json';
 
 function ProfileMenu({ className }) {
     return (
-        <div className={`profileMenu ${className}`} contentEditable={true}>
+        <div className={`profileMenu ${className}`}>
             <div className="profileMenu__row">
                 <div className="profileMenu__arrow" />
 
