@@ -21,7 +21,7 @@ function Profile({ profileHandler }) {
 
             <div className="profile__desc">
                 <div className="profile__info">
-                    <h4>Vivek Beewah</h4>
+                    <h4>User</h4>
                     {DownArrow}
                 </div>
                 <p>Active now</p>
