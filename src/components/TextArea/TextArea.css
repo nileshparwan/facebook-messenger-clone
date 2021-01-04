@@ -1,0 +1,39 @@
+textarea::placeholder {
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+
+textarea {
+  border: none;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 30px;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 140px;
+  max-height: 36px;
+  background-color: #3a3b3c;
+  color: #bec2c9;
+  font-size: 16px;
+  padding-top: 8px;
+}
+
+textarea:focus ~ .online {
+  right: 28px;
+}
+
+.online {
+  padding: 4px;
+  background: green;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: -10px;
+  transition: 0.5s ease-in;
+}
+
+
+
+

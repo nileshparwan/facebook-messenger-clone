@@ -17,7 +17,7 @@ function Message({ message, user = USERTYPE.CURRENT, position = POSITION.RIGHT, 
     return message ? (
         <div className={`message ${user} ${position} `}>
             <FeatureOptions className="message_featureOptions" options={MessageOtions?.options} />
-            <span className={`messageText ${user} ${className || ""} `} dangerouslySetInnerHTML={{ __html: `${message} ` }} />
+            <span tabIndex={0} className={`messageText ${user} ${className || ""} `} dangerouslySetInnerHTML={{ __html: `${message} ` }} />
         </div>
     ) : <></>;
 }

@@ -17,12 +17,7 @@
         "title": "gifts",
         "icon": "fas fa-gifts"
       }
-    ],
-    "formData": {
-      "placeholder": "Aa",
-      "smiley": "fas fa-smile",
-      "submit": "fas fa-caret-right"
-    },
+    ],    
     "likeBtn": "fas fa-thumbs-up"
   }
 }

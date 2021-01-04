@@ -10,7 +10,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
   z-index: 1;
 }
 
@@ -19,12 +19,34 @@
   width: 100%;
 }
 
+/*  */
+.inc__width {
+  margin-left: -105px;
+  width: 245px;
+  overflow: visible;
+}
 
-@media screen and (min-width: 600px){
+.inc__width textarea {
+  width: 100%;
+}
+
+.inc__width .online {
+  right: 28px;
+}
+
+.inc__width > .submit__btn {
+  display: flex;
+}
+
+.inc__width > .submit__btn {
+  display: flex;
+}
+
+@media screen and (min-width: 600px) {
   .facebookMessenger {
     width: 330px;
     position: absolute;
-    top:auto;
+    top: auto;
     left: auto;
     bottom: 0;
     right: 100px;
@@ -33,5 +55,4 @@
   .facebookMessenger > .messageBody {
     height: 350px;
   }
-
 }

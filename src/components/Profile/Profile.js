@@ -14,14 +14,14 @@ function Profile({ profileHandler }) {
         <button className="profile" onClick={() => profileHandler ? profileHandler() : {}}>
             <div className="profile_imageContainer">
                 <img
-                    src="https://scontent.fjnb3-1.fna.fbcdn.net/v/t1.0-1/c2.0.200.200a/p200x200/105392040_2158779914268598_1833508339547982447_n.jpg?_nc_cat=102&_nc_sid=7206a8&_nc_ohc=nkMsRIkgJ2IAX-ItDgB&_nc_ht=scontent.fjnb3-1.fna&_nc_tp=27&oh=8cc6a50455bd7799e0249d7137a73335&oe=5F98398D"
+                    src="https://via.placeholder.com/150"
                     alt="profile_image"
                 />
             </div>
 
             <div className="profile__desc">
                 <div className="profile__info">
-                    <h4>Vivek Beewah</h4>
+                    <h4>Test User</h4>
                     {DownArrow}
                 </div>
                 <p>Active now</p>
