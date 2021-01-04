@@ -1,18 +1,33 @@
 import React from 'react';
-import './App.css';
+import firebase from 'firebase';
+import FlipMove from 'react-flip-move';
+import { db } from './firebase';
 import MessageBody from './components/MessageBody/MessageBody';
 import Message, { USERTYPE, POSITION } from './components/Message/Message';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Form from './components/Form/Form';
 import TextArea from './components/TextArea/TextArea';
-// import Profile from './components/Profile/Profile';
+import './App.css';
 
 
 function App() {
   const messengerRef = React.createRef();
   const [input, setInput] = React.useState('');
+  const [messages, setMessages] = React.useState([]);
+  const [username, setUsername] = React.useState("");
 
+  React.useEffect(() => {
+    setUsername(prompt("Please enter your name"));
+  }, []);
+
+  React.useEffect(() => {
+    db.collection("messages")
+      .orderBy('timestamp', 'asc')
+      .onSnapshot(snapshot => { //the snapshot takes a picture of the current db befeore a change happens
+        setMessages(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })));
+      });
+  }, []);
 
   const MessageHandler = (event) => {
     event.preventDefault();
@@ -20,7 +35,7 @@ function App() {
     const form = footer.querySelector('form');
     const likeBtn = footer.querySelector('.footer__likeBtn');
 
-    if (event.target.value.length > 0) {
+    if (event.target.value.length >= 0) {
       setInput(event.target.value);
       // event.target.style.height = event.target.clientHeight + event.target.scrollHeight
       !form.classList.contains('inc_width') && form.classList.add('inc__width');
@@ -29,7 +44,18 @@ function App() {
     }
     !form.classList.contains('inc_width') && form.classList.remove('inc__width');
     likeBtn.classList.contains('hidden') && likeBtn.classList.remove('hidden');
+    return;
+  };
 
+  const sendMessage = (event) => {
+    event.preventDefault();
+    db.collection("messages")
+      .add({
+        message: input,
+        username: username,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      });
+    setInput("");
     return;
   };
 
@@ -37,13 +63,24 @@ function App() {
     <div className="App">
       <div ref={messengerRef} className="facebookMessenger">
         {/* <Profile /> */}
-        <Header />
+        <Header username={username} />
         <MessageBody>
-          <Message user={USERTYPE.CURRENT} message="text 1" />
-          <Message user={USERTYPE.NEXTCURRENT} position={POSITION.LEFT} message="text 2" />
+          <FlipMove>
+            {
+              messages.map((newMessage) => <Message
+                key={newMessage.id}
+                user={newMessage.data.username !== username ? USERTYPE.NEXTCURRENT : USERTYPE.CURRENT}
+                position={newMessage.data.username !== username ? POSITION.LEFT : POSITION.RIGHT}
+                username={newMessage.data.username} user={USERTYPE.CURRENT} message={newMessage.data.message}
+              />
+              )
+            }
+          </FlipMove>
+
+          {/* <Message user={USERTYPE.NEXTCURRENT} position={POSITION.LEFT} message="text 2" /> */}
         </MessageBody>
         <Footer>
-          <Form>
+          <Form sendMessageCb={sendMessage}>
             <TextArea value={input} onChange={MessageHandler} />
           </Form>
         </Footer>

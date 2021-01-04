@@ -41,7 +41,6 @@
 .inc__width > .submit__btn {
   display: flex;
 }
-
 @media screen and (min-width: 600px) {
   .facebookMessenger {
     width: 330px;

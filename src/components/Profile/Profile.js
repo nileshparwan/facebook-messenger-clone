@@ -1,7 +1,7 @@
 import React from 'react';
 import './Profile.css';
 
-function Profile({ profileHandler }) {
+function Profile({ profileHandler, username }) {
     const DownArrow = (
         <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15" version="1.1">
             <g id="surface1">
@@ -21,7 +21,7 @@ function Profile({ profileHandler }) {
 
             <div className="profile__desc">
                 <div className="profile__info">
-                    <h4>Test User</h4>
+                    <h4>{username || `Test User`}</h4>
                     {DownArrow}
                 </div>
                 <p>Active now</p>

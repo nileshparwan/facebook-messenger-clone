@@ -13,13 +13,16 @@ export const POSITION = {
     RIGHT: "right"
 };
 
-function Message({ message, user = USERTYPE.CURRENT, position = POSITION.RIGHT, className }) {
-    return message ? (
-        <div className={`message ${user} ${position} `}>
+const Message = React.forwardRef(({ message, username, user = USERTYPE.CURRENT, position = POSITION.RIGHT, className }, ref) => {
+    return(
+        <div ref={ref} className={`message ${user} ${position} `}>
             <FeatureOptions className="message_featureOptions" options={MessageOtions?.options} />
-            <span tabIndex={0} className={`messageText ${user} ${className || ""} `} dangerouslySetInnerHTML={{ __html: `${message} ` }} />
+            <div className="userMessage">
+                {(username && position == "left") && <small>{username}</small>}
+                <span tabIndex={0} className={`messageText ${user} ${className || ""} `} dangerouslySetInnerHTML={{ __html: `${message} ` }} />
+            </div>
         </div>
-    ) : <></>;
-}
+    )
+})
 
 export default Message;;;;;

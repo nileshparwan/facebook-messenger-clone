@@ -4,9 +4,28 @@
   flex-basis: 100%;
   margin: 2px 10px;
 }
-
+.userMessage {
+  display: flex;
+  flex-direction: column;
+}
+small {
+  margin-top:2px;
+  color: lightgray;
+  font-size: 8px;
+}
+.message.current .userMessage small {
+  text-align: right;
+  padding-right: 15px;
+}
+.messageText {
+  max-width: 225px;
+}
 .message.right {
   justify-content: flex-end;
+}
+.message.right .userMessage small {
+  text-align: left;
+  padding-left: 15px;
 }
 
 .message.left {
@@ -28,7 +47,6 @@
 .message.nextCurrent > .message_featureOptions {
   order: 2;
 }
-
 .message_featureOptions > button:first-child > i {
   padding: 2px 4px;
 }
@@ -36,7 +54,6 @@
 .message_featureOptions > button > i {
   padding: 2px 1px;
 }
-
 .message_featureOptions > button:hover {
   background-color: #5f6061;
 }
@@ -44,7 +61,6 @@
 .message_featureOptions {
   display: none;
 }
-
 .message:hover > .message_featureOptions {
   display: flex;
 }

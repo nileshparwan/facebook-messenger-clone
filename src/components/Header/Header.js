@@ -6,10 +6,9 @@ import FeatureOptions from '../FeatureOptions/FeatureOptions';
 import './Header.css';
 
 
-function Header() {
+function Header({username}) {
     const headerRef = React.createRef();
-    const ProfileHandler = (event) => {
-        // event.preventDefault();
+    const ProfileHandler = () => {
         const headerElem = headerRef?.current;
         const profileMenu = headerElem.querySelector('.header__profileMenu');
         if (!profileMenu.classList.contains('show')) return profileMenu.classList.add('show');
@@ -21,7 +20,7 @@ function Header() {
             <header className="header" ref={headerRef}>
                 <ProfileMenu className="header__profileMenu" />
                 <div className="header__row">
-                    <Profile profileHandler={(e) => ProfileHandler(e)} />
+                    <Profile username={username} profileHandler={ProfileHandler} />
                     <FeatureOptions className="featureOptionsCustom" options={headerButtons} />
                 </div>
             </header>
